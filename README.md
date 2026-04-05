@@ -29,11 +29,15 @@ http://localhost:8080/api/hola
 
 ## Desplegar en Render
 
+Render actualmente no ofrece Java como runtime nativo en su lista principal, asi que este proyecto queda preparado para desplegarse con Docker.
+
 1. Sube este proyecto a GitHub.
 2. En Render, crea un nuevo `Web Service`.
 3. Conecta el repositorio.
-4. Render detectara el archivo `render.yaml`.
-5. Despliega el servicio.
+4. En `Environment`, selecciona `Docker`.
+5. Si Render detecta el `Dockerfile`, no necesitas definir `Build Command`.
+6. Tampoco necesitas `Start Command`, porque Render ejecuta el `CMD` o `ENTRYPOINT` del `Dockerfile`.
+7. Despliega el servicio.
 
 ## Conectar un frontend despues
 
